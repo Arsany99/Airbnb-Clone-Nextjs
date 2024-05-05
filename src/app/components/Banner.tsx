@@ -10,7 +10,7 @@ const Banner = () => {
         fill
         />
         <div className="absolute top-1/2 w-full text-center">
-          <p className='text-sm sm:text-lg'>
+          <p className='text-sm text-white sm:text-lg'>
             not sure where to go? perfect
           </p>
           <button type='button' className='text-purple-500 bg-white px-10 py-4 shadow-md rounded-full font-bold'>
