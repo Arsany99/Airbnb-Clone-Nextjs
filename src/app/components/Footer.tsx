@@ -1,62 +1,58 @@
-import Link from 'next/link'
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
-    const Links =[{
-        title :'About' ,
-        Links : [
+    const Links = [{
+        title: 'About',
+        links: [
             'How Airbnb Works',
             'Newsroom',
             'Investors',
-            'Airbnb PLus',
-            'Airbnb Luxe '
+            'Airbnb Plus',
+            'Airbnb Luxe'
         ]
-    },{
-        title :'Community' ,
-        Links : [
-            'Accessbility',
+    }, {
+        title: 'Community',
+        links: [
+            'Accessibility',
             'THIS IS NOT Real Site',
-            'Its a Pretty Awesome Clone',
+            'It\'s a Pretty Awesome Clone',
             'Referrals',
             'Papafam'
         ]
-    },{
-        title :'Host' ,
-        Links : [
+    }, {
+        title: 'Host',
+        links: [
             'Papa React',
-            'Preesents',
-            'Zero To FuLL Stack Here',
-            'Hundred of Student',
+            'Presents',
+            'Zero To Full Stack Here',
+            'Hundreds of Student',
             'Join now'
         ]
-    },{
-        title :'Support' ,
-        Links : [
+    }, {
+        title: 'Support',
+        links: [
             'Papa React',
             'THIS IS NOT Real Site',
-            'Its a Pretty Awesome Clone',
+            'It\'s a Pretty Awesome Clone',
             'Referrals',
-            'Accessbility'
+            'Accessibility'
         ]
-    }
-]
-  return (
-    <footer className='container'>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 px-32 py-14 bg-gray-200">
-            {Links.map((link) =>(
-                <div className="space-y-4 text-xs text-gray-800">
-                    <h5 className='font-bold'>{link.title}</h5>
-                    {link.Links.map((item)=>(
-                        <Link href={item} className='block' key={item}>{item}
-                        </Link>
-                    ))}
-                </div>
+    }];
 
-            ))}
-           
-        </div>
-    </footer>
-  )
-}
+    return (
+        <footer className='container'>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 px-32 py-14 bg-gray-200">
+                {Links.map((link, index) => (
+                    <div key={index} className="space-y-4 text-xs text-gray-800">
+                        <h5 className='font-bold'>{link.title}</h5>
+                        {link.links.map((item, subIndex) => (
+                            <a href={item} className='block' key={subIndex}>{item}</a>
+                        ))}
+                    </div>
+                ))}
+            </div>
+        </footer>
+    );
+};
 
-export default Footer
+export default Footer;
